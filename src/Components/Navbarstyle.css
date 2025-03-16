@@ -1,8 +1,17 @@
-#navbar{
+.navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 2rem;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+}
+
+.navbar-bg{
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: 0.5s;
 }
 
 .nav-menu{
@@ -29,7 +38,7 @@
         align-items: center;
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.9);
         position: absolute;
         top: 0;
         left: -100%;

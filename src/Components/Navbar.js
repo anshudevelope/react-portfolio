@@ -1,8 +1,8 @@
 import "./Navbarstyle.css";
 
-import React, {useState}  from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import {FaBars, FaTimes} from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 
 
@@ -12,9 +12,21 @@ const Navbar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
+  const [color, setColor] = useState(false);
+
+  const changeColor = () => {
+    if (window.scrollY >= 100) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeColor);
+
 
   return (
-    <div id="navbar">
+    <div className={color ? "navbar navbar-bg" : "navbar"}>
       <Link to="/">
         <h1>ReactPortFolio.</h1>
       </Link>
@@ -35,7 +47,7 @@ const Navbar = () => {
       </ul>
 
       <div className="hamburger" onClick={handleClick}>
-        {click ? ( <FaTimes size={20} style={{ color: "#ffffff"}} />) : ( <FaBars size={20} style={{ color: "#ffffff"}} />)}
+        {click ? (<FaTimes size={20} style={{ color: "#ffffff" }} />) : (<FaBars size={20} style={{ color: "#ffffff" }} />)}
       </div>
 
     </div>
