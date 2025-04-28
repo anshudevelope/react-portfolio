@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <div className={color ? "navbar navbar-bg" : "navbar"}>
       <Link to="/">
-        <h1>ReactPortFolio.</h1>
+        <h1>Anshu.</h1>
       </Link>
 
       <ul className={click ? "nav-menu active" : "nav-menu"}>

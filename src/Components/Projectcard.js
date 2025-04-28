@@ -11,7 +11,7 @@ const Projectcard = (props) => {
     <div className='pro-details'>
       <p>{props.details}</p>
       <div className='pro-btns'>
-        <NavLink to={props.link} className="btn">View</NavLink>
+        <NavLink to={props.link} target='_blank' className="btn">View</NavLink>
         <NavLink to='#' className="btn">Source</NavLink>
       </div>
     </div>
